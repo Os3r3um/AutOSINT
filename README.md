@@ -1,42 +1,43 @@
 # AutOSINT
-Tool to automate common osint tasks. Probably best run on Kali.
+
+Tool to automate common OSINT tasks. Probably best run on Kali Linux.
 
 A project to try to automate some common things checked during open source intelligence gathering engagements.
 
-Dependencies: 
+## Dependencies: 
 
-in your path: whois, host, git, theHarvester(https://github.com/laramies/theHarvester), pyFoca(https://github.com/altjx/ipwn)
+**On your path:** 
+- whois
+- host
+- git
+- [theHarvester](https://github.com/laramies/theHarvester)
+- [pyFoca](https://github.com/altjx/ipwn)
 
-python modules: python-docx, shodan,  google 
+**Python modules:**
+- python-docx
+- shodan
+- google 
 
-other files:
+**Other files:**
 
-a hashcat style pot file, a list of hacked accounts (like linkedin) in format user:hash
+- A hashcat style pot file
+- A list of hacked accounts (like linkedin) in format `user:hash`
 
-Installation:
-
+## Installation:
+```
   $ git clone https://github.com/bharshbarger/AutOSINT.git
 
   $ chmod +x AutOSINT.py
 
   $ pip install --upgrade pip (optional)
 
-(if missing modules:)
+  $ pip install -r requirements.txt
+```
 
-https://github.com/achillean/shodan-python
+## Usage: 
 
-  $ pip install shodan
-
-https://pypi.python.org/pypi/google
-
-  $ pip install google
-
-https://python-docx.readthedocs.io/en/latest/user/install.html
-
-  $ pip install python-docx
-
-
-usage: AutOSINT.py [-h] [-a] [-c] [-d DOMAIN [DOMAIN ...]] [-f]
+```
+AutOSINT.py [-h] [-a] [-c] [-d DOMAIN [DOMAIN ...]] [-f]
                    [-g GOOGLEDORK [GOOGLEDORK ...]]
                    [-i IPADDRESS [IPADDRESS ...]] [-n]
                    [-p PASTEBINSEARCH [PASTEBINSEARCH ...]] [-s SHODAN]
@@ -84,3 +85,4 @@ optional arguments:
   
   -w, --whois           query Whois for supplied -d or -i values. Requires a
                         -d or -i value
+```
